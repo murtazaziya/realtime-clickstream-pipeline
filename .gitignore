@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.env
+venv/
+*.egg-info/
+
+# Data
+data_lake/
+*.parquet
+
+# Terraform
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.backup
+infra/.terraform.lock.hcl
+
+# dbt
+dbt_transforms/target/
+dbt_transforms/logs/
+
+# Logs
+*.log
