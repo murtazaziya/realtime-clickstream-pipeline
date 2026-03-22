@@ -10,10 +10,11 @@ data_lake/
 *.parquet
 
 # Terraform
-infra/.terraform/
-infra/*.tfstate
-infra/*.tfstate.backup
-infra/.terraform.lock.hcl
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform.lock.hcl
+terraform/terraform.tfvars
 
 # dbt
 dbt_transforms/target/
