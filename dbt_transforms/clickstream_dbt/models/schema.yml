@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_raw_events
+    description: "Cleaned and standardized raw clickstream events"
+    columns:
+      - name: event_id
+        description: "Unique event identifier"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_page_traffic
+    description: "Cleaned page traffic aggregates"
+
+  - name: stg_country_traffic
+    description: "Cleaned country traffic aggregates with conversion rates"
+
+  - name: stg_device_analytics
+    description: "Cleaned device analytics with conversion rates"
+
+  - name: mart_page_performance
+    description: "Page performance metrics for Power BI"
+    columns:
+      - name: page_url
+        tests:
+          - not_null
+
+  - name: mart_conversion_funnel
+    description: "Conversion funnel analysis by page and event type"
+
+  - name: mart_geo_performance
+    description: "Geographic performance and conversion metrics"
+
+  - name: mart_device_performance
+    description: "Device and browser performance metrics"
